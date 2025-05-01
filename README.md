@@ -27,3 +27,7 @@ Se propone el siguiente diagrama de pipeline para el problema en cuestión:
 
 !![ML_Pipeline](./img/Pipeline1.png)
 
+### Fuente de Datos:
+
+El modelo se alimentará de datasets especializados en los que se incluyan mediciones clínicas, como presión, temperatura, etc. Y también síntomás anunciados por el paciente u observados por el médico. Para poder llevar a cabo el diagnóstico, se tendrá en cuenta datos de la historia clínica del paciente, exámenes, resultados de laboratior etc.
+
