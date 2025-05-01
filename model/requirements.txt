@@ -1,0 +1,9 @@
+# requirements.txt
+
+# Versiones fijas basadas en el entorno de desarrollo/producción
+# Python verificado: 3.11.12
+
+scikit-learn version==1.6.1
+joblib version==1.4.2
+pandas version==2.2.2
+numpy version==2.0.2
