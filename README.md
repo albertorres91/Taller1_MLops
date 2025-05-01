@@ -43,5 +43,10 @@ A continuación, se llevará a cabo un ejercicio de EDA y features engineer con 
 
 Luego de la etapa de experimentación, se debe decidir cuál es el mejor modelo basado en el desempeño. Una vez se tiene el modelo, se debe evaluar si las métricas que dieron lugar al modelo escogido son suficientes para que el modelo pase a producción. Si no es así, se retorna a la etapa de iteración. 
 
+
 ## Predicciones
+
+### Despliegue del modelo
+
+En esta etapa se pondrán a punto los requisitos de despliegue; diseño y del o los contendores necesarios para el despliegue. Se requiere que la puesta a punto incluya un momento de prueba para garantizar que los contendores están bien orquestados y que la arquitectura funciona apropiadamente. 
 
