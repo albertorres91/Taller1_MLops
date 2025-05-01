@@ -27,6 +27,8 @@ Se propone el siguiente diagrama de pipeline para el problema en cuestión:
 
 !![ML_Pipeline](./img/Pipeline1.png)
 
+## Entrenamiento Offline
+
 ### Data Input:
 
 El modelo se entrenará con datasets especializados en los que se incluyan mediciones clínicas, como presión, temperatura, etc. Y también síntomás anunciados por el paciente u observados por el médico. Para poder llevar a cabo el diagnóstico, se tendrá en cuenta datos de la historia clínica del paciente, exámenes, resultados de laboratios etc. Se definirá el esquema que seguirán los datos. 
@@ -40,3 +42,6 @@ A continuación, se llevará a cabo un ejercicio de EDA y features engineer con 
 ### Selección y Evaluación del Modelo:
 
 Luego de la etapa de experimentación, se debe decidir cuál es el mejor modelo basado en el desempeño. Una vez se tiene el modelo, se debe evaluar si las métricas que dieron lugar al modelo escogido son suficientes para que el modelo pase a producción. Si no es así, se retorna a la etapa de iteración. 
+
+## Predicciones
+
