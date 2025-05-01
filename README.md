@@ -11,7 +11,7 @@ Dados los avances tecnológicos, en el campo de la medicina la cantidad de infor
 
 El modelo será entrenado manualmente por un ingeniero de ML.
 
-El dataset de entrenamiento [link](https://www.kaggle.com/datasets/uom190346a/disease-symptoms-and-patient-profile-dataset/data) tiene siíntomas asociados a las enfermedades.
+El dataset de entrenamiento [link](https://www.kaggle.com/datasets/uom190346a/disease-symptoms-and-patient-profile-dataset/data) tiene síntomas asociados a las enfermedades.
 
 Los datos serán evaluados en un Análisis Exploratorio de Datos (EDA) para identificar su estructura interna. Se entrenarán varios modelos de clasificación y se escogerá el que mejor desempeño tenga, asegurando así el mejor rendimiento.
 
