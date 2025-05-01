@@ -25,5 +25,5 @@ El conjunto se pondrá a disposición 24hrs. 7 días a la semana para su consult
 
 Se propone el siguiente diagrama de pipeline para el problema en cuestión:
 
-!![ML_Pipeline](./img/Pipeline.png)
+!![ML_Pipeline](./img/Pipeline1.png)
 
