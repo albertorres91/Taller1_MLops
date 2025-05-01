@@ -29,8 +29,11 @@ Se propone el siguiente diagrama de pipeline para el problema en cuestión:
 
 ### Data Input:
 
-El modelo se entrenará con datasets especializados en los que se incluyan mediciones clínicas, como presión, temperatura, etc. Y también síntomás anunciados por el paciente u observados por el médico. Para poder llevar a cabo el diagnóstico, se tendrá en cuenta datos de la historia clínica del paciente, exámenes, resultados de laboratios etc.
+El modelo se entrenará con datasets especializados en los que se incluyan mediciones clínicas, como presión, temperatura, etc. Y también síntomás anunciados por el paciente u observados por el médico. Para poder llevar a cabo el diagnóstico, se tendrá en cuenta datos de la historia clínica del paciente, exámenes, resultados de laboratios etc. Se definirá el esquema que seguirán los datos. 
 
-A continuación, se llevará a cabo un ejercicio de EDA y features engineer con el fin de comprender la estreuctura de los datos.
+
+### Data Input:
+
+A continuación, se llevará a cabo un ejercicio de EDA y features engineer con el fin de comprender la estructura de los datos. En un siguiente momento, se comenzará con el entrenamiento, optimización y validación del mejor modelo para el caso de estudio.
 
 
