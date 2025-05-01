@@ -37,3 +37,6 @@ El modelo se entrenará con datasets especializados en los que se incluyan medic
 A continuación, se llevará a cabo un ejercicio de EDA y features engineer con el fin de comprender la estructura de los datos. En un siguiente momento, se comenzará con el entrenamiento, optimización y validación del mejor modelo para el caso de estudio.
 
 
+### Selección y Evaluación del Modelo:
+
+Luego de la etapa de experimentación, se debe decidir cuál es el mejor modelo basado en el desempeño. Una vez se tiene el modelo, se debe evaluar si las métricas que dieron lugar al modelo escogido son suficientes para que el modelo pase a producción. Si no es así, se retorna a la etapa de iteración. 
