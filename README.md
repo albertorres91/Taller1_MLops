@@ -46,7 +46,15 @@ Luego de la etapa de experimentación, se debe decidir cuál es el mejor modelo 
 
 ## Predicciones
 
-### Despliegue del modelo
+### Despliegue del modelo:
 
 En esta etapa se pondrán a punto los requisitos de despliegue; diseño y del o los contendores necesarios para el despliegue. Se requiere que la puesta a punto incluya un momento de prueba para garantizar que los contendores están bien orquestados y que la arquitectura funciona apropiadamente. 
 
+
+### Predicciones en streaming:
+
+Una vez en producción, la aplicación será puesta a disposición de los médicos 24hrs. 7 días a la semana. Las predicciones se harán bajo demanda.
+
+### Monitoreo del modelo;
+
+El modelo debe estar bajo constante monitoreo para garantizar que no hay data drift, model drift. Incluso, se cree necesario agregar feedback de parte del personal médico una vez se confirme el diágnostico del paciente. La aplicación sirve de apoyo inicial al conocimiento y experticie médica. No pretende reemplazar el diagnóstico llevado a cabo por un profesional médico.
