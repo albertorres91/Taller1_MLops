@@ -1,12 +1,13 @@
-FROM python:3.7
+FROM python:3.12-slim
 
-WORKDIR /docker
+WORKDIR /app
 
-COPY . /docker
+COPY . /app
 
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install -r requirements.txt 
 
-WORKDIR /docker/app
+WORKDIR /model/app
 
 EXPOSE 5000
 
