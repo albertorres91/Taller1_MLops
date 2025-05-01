@@ -1,6 +1,6 @@
 import numpy as np
 
-diagnosis = ['SANO', 'ENFERMEDAD LEVE','ENFERMEDAD GRAVE','ENFERMEDAD CRÓNICA', 'ENFERMEDAD HUÉRFANA']
+diagnosis = ['NO ENFERMO', 'ENFERMEDAD LEVE','ENFERMEDAD AGUDA','ENFERMEDAD CRÓNICA']
 
 def diag():
     
