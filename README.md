@@ -71,4 +71,3 @@ docker-compose build --no-cache
 
 ## Iniciar el contenedor
 docker-compose up
-|
