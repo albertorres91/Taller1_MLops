@@ -58,3 +58,16 @@ Una vez en producción, la aplicación será puesta a disposición de los médic
 ### Monitoreo del modelo;
 
 El modelo debe estar bajo constante monitoreo para garantizar que no hay data drift, model drift. Incluso, se cree necesario agregar feedback de parte del personal médico una vez se confirme el diágnostico del paciente. La aplicación sirve de apoyo inicial al conocimiento y experticie médica. No pretende reemplazar el diagnóstico llevado a cabo por un profesional médico.
+
+
+
+Correr el modelo ubicarse dentro de la carpeta model, correr docker desktop y ejecutar 
+
+## Detener cualquier contenedor previo
+docker-compose down
+
+# Reconstruir la imagen 
+docker-compose build --no-cache
+
+# Iniciar el contenedor
+docker-compose up
