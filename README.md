@@ -66,8 +66,8 @@ El modelo debe estar bajo constante monitoreo para garantizar que no hay data dr
 ## Detener cualquier contenedor previo
 docker-compose down
 
-# Reconstruir la imagen 
+## Reconstruir la imagen 
 docker-compose build --no-cache
 
-# Iniciar el contenedor
+## Iniciar el contenedor
 docker-compose up
