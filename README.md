@@ -61,7 +61,7 @@ El modelo debe estar bajo constante monitoreo para garantizar que no hay data dr
 
 
 
-# Correr el modelo ubicarse dentro de la carpeta model, correr docker desktop y ejecutar 
+# Para correr el modelo es necesario ubicarse dentro de la carpeta model; estar ejecutando la aplicación "docker desktop" y ejecutar el siguiente código 
 
 ## Detener cualquier contenedor previo
 docker-compose down
@@ -71,3 +71,4 @@ docker-compose build --no-cache
 
 ## Iniciar el contenedor
 docker-compose up
+|
