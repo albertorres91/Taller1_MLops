@@ -17,12 +17,12 @@ class PacienteInput(BaseModel):
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-logger.info("Iniciando la aplicación FastAPI")
+logger.info("Iniciando la aplicación FastAPI detección de enfermedades huérfanas y comunes")
 
 app = FastAPI(
-    title="API de Diagnóstico Médico",
-    description="API para predecir diagnósticos médicos basados en síntomas y datos vitales",
-    version="1.0.0"
+    title="API de ayuda al Diagnóstico Médico",
+    description="Ayuda médica para diagnóstico a partir de síntomas y evluación clínica objetiva",
+    version="1.0.1"
 )
 
 @app.get('/')
