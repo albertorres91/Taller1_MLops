@@ -1,0 +1,57 @@
+[
+  {
+    "fecha": "2025-05-18T23:00:12.082188",
+    "diagnostico": "NO ENFERMO",
+    "datos_paciente": {
+      "sintomas": [],
+      "temperatura": 37.0,
+      "edad": 10,
+      "sexo": "masculino",
+      "frecuencia_cardiaca": 80
+    }
+  },
+  {
+    "fecha": "2025-05-18T23:01:57.334425",
+    "diagnostico": "NO ENFERMO",
+    "datos_paciente": {
+      "sintomas": [],
+      "temperatura": 38.0,
+      "edad": 10,
+      "sexo": "masculino",
+      "frecuencia_cardiaca": 80
+    }
+  },
+  {
+    "fecha": "2025-05-18T23:02:13.074544",
+    "diagnostico": "NO ENFERMO",
+    "datos_paciente": {
+      "sintomas": [],
+      "temperatura": 38.0,
+      "edad": 10,
+      "sexo": "masculino",
+      "frecuencia_cardiaca": 120
+    }
+  },
+  {
+    "fecha": "2025-05-18T23:02:31.743518",
+    "diagnostico": "ENFERMEDAD AGUDA",
+    "datos_paciente": {
+      "sintomas": [],
+      "temperatura": 42.0,
+      "edad": 10,
+      "sexo": "masculino",
+      "frecuencia_cardiaca": 120
+    }
+  },
+  {
+    "fecha": "2025-05-18T23:02:54.886324",
+    "diagnostico": "ENFERMEDAD AGUDA",
+    "datos_paciente": {
+      "sintomas": [],
+      "temperatura": 45.0,
+      "edad": 90,
+      "sexo": "masculino",
+      "frecuencia_cardiaca": 180
+    }
+  }
+]

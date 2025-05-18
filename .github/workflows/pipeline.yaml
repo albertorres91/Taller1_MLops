@@ -1,0 +1,72 @@
+name: Consolidated CI/CD Pipeline
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  pr-comment-start:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "CI/CD en acción. Ejecutando tareas..."
+            })
+
+  setup-and-test:
+    needs: pr-comment-start
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run unit tests
+        run: |
+          python -m unittest discover -s tests -v
+
+  pr-comment-success:
+    if: github.event_name == 'pull_request' && needs.setup-and-test.result == 'success'
+    needs: [setup-and-test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "CI/CD terminado con éxito. Las pruebas unitarias pasaron correctamente."
+            })
+
+  pr-comment-failure:
+    if: github.event_name == 'pull_request' && needs.setup-and-test.result == 'failure'
+    needs: [setup-and-test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "CI/CD falló. Por favor revisa los errores en las pruebas unitarias."
+            })
