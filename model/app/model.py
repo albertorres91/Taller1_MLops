@@ -2,8 +2,8 @@ import numpy as np
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
-# Lista de diagnósticos posibles
-diagnosis = ['NO ENFERMO', 'ENFERMEDAD LEVE', 'ENFERMEDAD AGUDA', 'ENFERMEDAD CRÓNICA']
+# Lista de diagnósticos posibles actualizada
+diagnosis = ['NO ENFERMO', 'ENFERMEDAD LEVE', 'ENFERMEDAD AGUDA', 'ENFERMEDAD CRÓNICA', 'ENFERMEDAD TERMINAL']
 
 # Función sencilla para diagnóstico aleatorio (fallback)
 def diag():
@@ -25,7 +25,7 @@ def clasificar_estado_salud_sin_presion(sintomas, temperatura, edad, sexo, frecu
         frecuencia_cardiaca (int): Pulsaciones por minuto.
 
     Returns:
-        str: Etiqueta: "NO ENFERMO", "ENFERMEDAD LEVE", "ENFERMEDAD AGUDA", "ENFERMEDAD CRÓNICA".
+        str: Etiqueta: "NO ENFERMO", "ENFERMEDAD LEVE", "ENFERMEDAD AGUDA", "ENFERMEDAD CRÓNICA", "ENFERMEDAD TERMINAL".
     """
 
     # 1. Validar entradas
@@ -66,6 +66,35 @@ def clasificar_estado_salud_sin_presion(sintomas, temperatura, edad, sexo, frecu
         fc_normal_alta = 120
         fc_taquicardia_leve = 140
         fc_taquicardia_aguda = 160
+
+    # 0. Condiciones para ENFERMEDAD TERMINAL (prioridad máxima si se detectan)
+    sintomas_terminales_clave = [
+        "cáncer en etapa terminal", 
+        "enfermedad terminal diagnosticada",
+        "insuficiencia orgánica múltiple",
+        "enfermedad degenerativa avanzada",
+        "cuidados paliativos"
+    ]
+    
+    tiene_sintoma_terminal = any(st in " ".join(sintomas_norm) for st in sintomas_terminales_clave)
+    
+    # Pacientes con enfermedades terminales conocidas
+    if tiene_sintoma_terminal:
+        return "ENFERMEDAD TERMINAL"
+    
+    # Pacientes con múltiples fallos orgánicos y síntomas graves
+    if ("fallo hepático" in sintomas_norm and "fallo renal" in sintomas_norm) or \
+       ("fallo cardíaco avanzado" in sintomas_norm and "dificultad extrema para respirar" in sintomas_norm):
+        return "ENFERMEDAD TERMINAL"
+    
+    # Pacientes con metástasis conocida
+    if "metástasis" in sintomas_norm and ("dolor crónico severo" in sintomas_norm or "pérdida de peso extrema" in sintomas_norm):
+        return "ENFERMEDAD TERMINAL"
+    
+    # Pacientes con deterioro extremo y edad avanzada
+    if edad > 80 and ("deterioro cognitivo avanzado" in sintomas_norm or "incapacidad total" in sintomas_norm) and \
+       (frecuencia_cardiaca < 50 or frecuencia_cardiaca > 140) and temperatura < 35.0:
+        return "ENFERMEDAD TERMINAL"
 
     # A. Condiciones para ENFERMEDAD CRÓNICA
     # (Prioridad si se cumplen ciertos criterios, incluso con síntomas agudos leves)
