@@ -1,3 +1,51 @@
+# Sistema de Diagnóstico Médico con IA
+
+## Problema
+
+En el campo de la medicina moderna, la cantidad de información disponible sobre pacientes es abundante. Sin embargo, para enfermedades poco comunes (conocidas como "huérfanas"), los datos escasean considerablemente. Este proyecto aborda el desafío de desarrollar un modelo de inteligencia artificial capaz de predecir posibles enfermedades a partir de los síntomas presentados por un paciente, funcionando efectivamente tanto para enfermedades comunes (con muchos datos disponibles) como para enfermedades huérfanas (con pocos datos).
+
+
+## Propósito
+
+El sistema está diseñado para servir como herramienta de apoyo al diagnóstico médico, disponible 24/7 para consulta por parte de profesionales de la salud. El modelo analiza datos de síntomas y perfil del paciente para sugerir posibles diagnósticos, actuando como un complemento al conocimiento y experiencia médica, sin pretender reemplazar el diagnóstico profesional.
+
+
+## Estructura del Repositorio
+
+```
+.
+├── model/
+│   ├── app/
+│   │   ├── app.py        # Aplicación principal que expone el API
+│   │   └── model.py      # Implementación del modelo de clasificación
+│   ├── .dockerignore     # Archivos excluidos de la imagen Docker
+│   ├── docker-compose.yml # Configuración de contenedores Docker
+│   └── requirements.txt  # Dependencias de Python necesarias
+├── img/
+│   └── Pipeline1.png     # Diagrama del pipeline de ML
+└── README.md            # Este archivo
+```
+
+# Ejecución del Modelo
+
+## Para ejecutar el modelo:
+
+Ubicarse dentro de la carpeta model
+Asegurarse de que la aplicación "Docker Desktop" esté en ejecución
+Ejecutar los siguientes comandos:
+
+bash# Detener cualquier contenedor previo
+docker-compose down
+
+## Reconstruir la imagen 
+docker-compose build --no-cache
+
+## Iniciar el contenedor
+docker-compose up
+
+El modelo estará disponible para realizar predicciones bajo demanda y cuenta con monitoreo constante para garantizar su rendimiento y precisión a lo largo del tiempo.
+
+
 # Taller 1 MLOps -> V1.0
 
 ## Caso de estudio
