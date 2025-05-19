@@ -8,7 +8,7 @@ class TestModeloEnfermedad(unittest.TestCase):
             sintomas=["leve dolor de cabeza"],
             temperatura=36.5,
             edad=25,
-            sexo="M",
+            sexo="maculino",
             frecuencia_cardiaca=70
         )
         self.assertEqual(resultado, "ENFERMEDAD LEVE")
@@ -19,9 +19,7 @@ class TestModeloEnfermedad(unittest.TestCase):
             sintomas=["fiebre alta", "dificultad para respirar"],
             temperatura=39.5,
             edad=65,
-            sexo="F",
+            sexo="femenino",
             frecuencia_cardiaca=110
         )
         self.assertEqual(resultado, "ENFERMEDAD GRAVE")
-    
-    # Actualiza el resto de pruebas de manera similar...
