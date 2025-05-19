@@ -1,9 +1,9 @@
 import unittest
-from model.app.model import ModeloEnfermedad  # Ajusta según tu implementación real
+from model.app.model import clasificar_estado_salud_sin_presion  # Ajusta según tu implementación real
 
 class TestModeloEnfermedad(unittest.TestCase):
     def setUp(self):
-        self.modelo = ModeloEnfermedad()
+        self.modelo = clasificar_estado_salud_sin_presion()
         # Opcional: Resetear estadísticas antes de cada prueba
     
     def test_prediccion_enfermedad_leve(self):
