@@ -49,3 +49,25 @@ jobs:
                 ? '✅ Pruebas exitosas' 
                 : '❌ Falló en pruebas'
             })
+
+  docker:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.PERSONAL_TOKEN }}
+
+      - name: Build Docker image
+        run: |
+          docker build -f model/Dockerfile -t ghcr.io/${{ github.repository }}:latest .
+
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/${{ github.repository }}:latest
