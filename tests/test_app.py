@@ -1,5 +1,5 @@
 import unittest
-from app.app import app  # Ajusta según tu implementación real
+from model.app.app import app  # Ajusta según tu implementación real
 import json
 
 class TestApp(unittest.TestCase):

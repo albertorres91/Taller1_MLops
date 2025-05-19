@@ -1,5 +1,5 @@
 import unittest
-from app.model import ModeloEnfermedad  # Ajusta según tu implementación real
+from model.app.model import ModeloEnfermedad  # Ajusta según tu implementación real
 
 class TestModeloEnfermedad(unittest.TestCase):
     def setUp(self):
