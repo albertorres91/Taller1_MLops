@@ -1,26 +1,23 @@
 import unittest
-from model.app.app import app  # Ajusta según tu implementación real
-import json
+from fastapi.testclient import TestClient  # Cambio importante aquí
+from model.app.app import app  # Asegúrate que esta ruta es correcta
 
 class TestApp(unittest.TestCase):
     def setUp(self):
-        self.app = app.test_client()
-        self.app.testing = True
+        self.client = TestClient(app)  # Así se usa en FastAPI
     
     def test_endpoint_prediccion(self):
         """Prueba el endpoint de predicción"""
-        respuesta = self.app.post('/predecir', json={
+        respuesta = self.client.post('/predecir', json={
             "edad": 30,
             "sintomas": ["dolor de cabeza"],
             "condiciones": []
         })
         self.assertEqual(respuesta.status_code, 200)
-        datos = json.loads(respuesta.data)
-        self.assertIn("resultado", datos)
+        self.assertIn("resultado", respuesta.json())
     
     def test_endpoint_estadisticas(self):
         """Prueba el endpoint de estadísticas"""
-        respuesta = self.app.get('/estadisticas')
+        respuesta = self.client.get('/estadisticas')
         self.assertEqual(respuesta.status_code, 200)
-        datos = json.loads(respuesta.data)
-        self.assertIsInstance(datos, dict)
+        self.assertIsInstance(respuesta.json(), dict)
