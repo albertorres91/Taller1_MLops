@@ -6,6 +6,11 @@ on:
   push:
     branches: [ main ]
 
+# Añade estos permisos
+permissions:
+  contents: read
+  pull-requests: write  # Esto permite comentar en PRs
+
 jobs:
   pr-comment-start:
     if: github.event_name == 'pull_request'
@@ -13,6 +18,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}  # Especifica el token explícitamente
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -48,6 +54,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -63,6 +70,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
