@@ -46,7 +46,7 @@ jobs:
       - name: Run unit tests
         run: |
           export PYTHONPATH=${PYTHONPATH}:$GITHUB_WORKSPACE
-          python -m pytest model/tests -v
+          python -m pytest tests -v
 
   pr-comment-success:
     if: github.event_name == 'pull_request' && needs.setup-and-test.result == 'success'
