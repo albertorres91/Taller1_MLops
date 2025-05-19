@@ -1,4 +1,4 @@
-# .dockerignore
+# .dockerignore este es un archivo de configuración para Docker
 
 # Git
 .git
