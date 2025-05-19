@@ -68,6 +68,10 @@ jobs:
         run: |
           docker build -f model/Dockerfile -t ghcr.io/${{ github.repository }}:latest .
 
+      - name: Run tests inside Docker
+        run: |
+          docker run --rm ghcr.io/${{ github.repository }}:latest python -m pytest tests/ -v
+
       - name: Push Docker image
         run: |
           docker push ghcr.io/${{ github.repository }}:latest
