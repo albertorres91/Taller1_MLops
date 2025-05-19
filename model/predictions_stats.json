@@ -1,0 +1,10 @@
+{
+  "categorias": {
+    "NO ENFERMO": 3,
+    "ENFERMEDAD LEVE": 0,
+    "ENFERMEDAD AGUDA": 2,
+    "ENFERMEDAD CR\u00d3NICA": 0,
+    "ENFERMEDAD TERMINAL": 0
+  },
+  "ultima_prediccion": "2025-05-18T23:02:54.896271"
+}

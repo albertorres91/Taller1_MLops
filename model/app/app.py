@@ -24,8 +24,8 @@ logger.setLevel(logging.INFO)
 logger.info("Iniciando la aplicación FastAPI detección de enfermedades huérfanas y comunes")
 
 # Configuración de archivos
-PREDICTIONS_FILE = "predictions_log.json"
-STATS_FILE = "predictions_stats.json"
+PREDICTIONS_FILE = "../predictions_log.json"  # Sube un nivel desde app/ a model/
+STATS_FILE = "../predictions_stats.json"
 
 # Crear archivos si no existen
 Path(PREDICTIONS_FILE).touch(exist_ok=True)

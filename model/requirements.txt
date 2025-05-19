@@ -10,3 +10,5 @@ numpy==2.0.2
 fastapi==0.110.0
 uvicorn==0.27.0
 pydantic==2.5.2
+flask==2.3.2
+unittest2==1.1.0

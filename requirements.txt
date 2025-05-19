@@ -1,0 +1,7 @@
+flask==2.3.2
+unittest2==1.1.0
+numpy==1.26.4
+pytest==8.0.2
+uvicorn==0.27.0
+fastapi==0.109.1
+httpx==0.27.0  # Necesario para TestClient
