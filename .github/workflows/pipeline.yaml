@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.PERSONAL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const result = '${{ needs.test.result }}'
             github.rest.issues.createComment({
