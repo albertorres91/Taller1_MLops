@@ -16,7 +16,7 @@ class TestApp(unittest.TestCase):
             "frecuencia_cardiaca": 70
         })
         self.assertEqual(respuesta.status_code, 200)
-        self.assertIn("resultado", respuesta.json())
+        self.assertIn("diagnostico", respuesta.json())
     
     def test_endpoint_estadisticas(self):
         """Prueba el endpoint de estadísticas"""
