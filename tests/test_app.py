@@ -11,7 +11,9 @@ class TestApp(unittest.TestCase):
         respuesta = self.client.post('/predictions', json={
             "edad": 30,
             "sintomas": ["dolor de cabeza"],
-            "condiciones": []
+            "temperatura": 36.5,
+            "sexo": "masculino",
+            "frecuencia_cardiaca": 70
         })
         self.assertEqual(respuesta.status_code, 200)
         self.assertIn("resultado", respuesta.json())

@@ -8,7 +8,7 @@ class TestModeloEnfermedad(unittest.TestCase):
             sintomas=["leve dolor de cabeza"],
             temperatura=36.5,
             edad=25,
-            sexo="maculino",
+            sexo="masculino",
             frecuencia_cardiaca=70
         )
         self.assertEqual(resultado, "ENFERMEDAD LEVE")
