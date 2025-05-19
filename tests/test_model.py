@@ -13,7 +13,7 @@ class TestModeloEnfermedad(unittest.TestCase):
         )
         self.assertEqual(resultado, "ENFERMEDAD LEVE")
     
-    def test_prediccion_enfermedad_grave(self):
+    def test_prediccion_enfermedad_aguda(self):
         """Prueba que el modelo devuelve ENFERMEDAD GRAVE con síntomas graves"""
         resultado = clasificar_estado_salud_sin_presion(
             sintomas=["fiebre alta", "dificultad para respirar"],
@@ -22,4 +22,4 @@ class TestModeloEnfermedad(unittest.TestCase):
             sexo="femenino",
             frecuencia_cardiaca=110
         )
-        self.assertEqual(resultado, "ENFERMEDAD GRAVE")
+        self.assertEqual(resultado, "ENFERMEDAD AGUDA")
