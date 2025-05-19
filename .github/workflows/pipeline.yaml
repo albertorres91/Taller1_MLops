@@ -40,7 +40,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const result = needs.test.result
+            const result = '${{ needs.test.result }}'
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
