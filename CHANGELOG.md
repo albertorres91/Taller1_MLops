@@ -33,3 +33,6 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Added
 - Archivo CHANGELOG.md para control de cambios del proyecto.
+
+### Fixed
+- Carpeta img restaurada.
