@@ -56,7 +56,7 @@ El conjunto se pondrá a disposición 24hrs a través de una API habilitada en l
 
 Se propone el siguiente diagrama de pipeline para el problema en cuestión:
 
-!![ML_Pipeline](./img/Pipeline1.png)
+!![ML_Pipeline](./img/Pipeline1.jpg)
 
 
 ### Data Input:
